@@ -1,7 +1,7 @@
 # Личный проект «Мишка» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Олег Назаров](https://up.htmlacademy.ru/adaptive/20/user/977377).
-* Наставник: `Неизвестно`.
+* Наставник: [Александр Панасюк](https://up.htmlacademy.ru/htmlcss/28/user/492311).
 
 ---
 
