@@ -169,5 +169,29 @@
       </div>
     </div>
   </footer>
+  <section class="modal modal-cart">
+		<h2 class="modal__heading">Товар добавлен в корзину!</h2>
+    <form class="modal__form" action="https://echo.htmlacademy.ru/courses" method="get">
+      <fieldset>
+        <legend>Выберите размер:</legend>
+        <ul class="modal__list modal-list">
+          <li class="modal-list__item">
+            <input class="visually-hidden" type="radio" id="modal-radio-s" name="size" value="small">
+            <label class="modal-list__size-button" for="modal-radio-s">S</label>
+          </li>
+          <li class="modal-list__item">
+            <input class="visually-hidden" type="radio" id="modal-radio-m" name="size" value="medium">
+            <label class="modal-list__size-button" for="modal-radio-m">M</label>
+          </li>
+          <li class="modal-list__item">
+            <input class="visually-hidden" type="radio" id="modal-radio-l" name="size" value="large">
+            <label class="modal-list__size-button" for="modal-radio-l">L</label>
+          </li>
+        </ul>
+      </fieldset>
+      <button class="modal__button button" type="submit">Добавить</button>
+    </form>
+		<button class="modal-close-button" type="button" aria-label="Закрыть окно"></button>
+  </section>
 </body>
 </html>
