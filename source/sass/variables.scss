@@ -1,21 +1,18 @@
 :root {
-// colors
-  --clear-background: #FFF;
-  --light-background: #F1F1F1;
-  // --dark-background: #coming soon;
+  --clear-background: #ffffff;
+  --light-background: #f1f1f1;
   --decorative-divider: var(--light-background);
-  --footer-mobile-divider: #E5E5E5;
-  --main-theme: #63D1BB;
-  --theme-lines: #62D1BA;
+  --footer-mobile-divider: #e5e5e5;
+  --main-theme: #63d1bb;
+  --theme-lines: #62d1ba;
   --category-light-background: var(--main-theme);
-  --category-dark-background: #56C3B2;
+  --category-dark-background: #56c3b2;
   --category-icon: #149080;
-  --basic-type: #000;
-  --basic-type-contrast: #FFF;
-  --light-type: #444;
+  --basic-type: #000000;
+  --basic-type-contrast: #ffffff;
+  --light-type: #444444;
   --basic-border: var(--light-type);
-  --thin-border: #ECECEC;
-// opacity
+  --thin-border: #ececec;
   --link-opacity-hover: 0.6;
   --link-opacity-down: 0.3;
 }

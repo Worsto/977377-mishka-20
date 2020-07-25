@@ -1,5 +1,6 @@
 .page-header__logo {
   display: block;
+
   img {
     display: block;
     margin: 0 auto;
@@ -8,7 +9,8 @@
   }
 }
 
-.page-header__heading, .page-header__emphasis {
+.page-header__heading,
+.page-header__emphasis {
   margin: 0;
   background-color: var(--light-background);
   font-weight: bold;
@@ -22,7 +24,7 @@
 }
 
 .page-header__emphasis {
-  background-image: url(../img/hero-mobile@1x.jpg);
+  background-image: url("../img/hero-mobile@1x.jpg");
   padding-bottom: 120px;
   background-repeat: no-repeat;
   background-position: center;
@@ -33,4 +35,3 @@
   margin: 0;
   margin-bottom: 31px;
 }
-
