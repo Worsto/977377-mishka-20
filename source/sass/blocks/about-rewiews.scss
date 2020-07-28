@@ -1,0 +1,27 @@
+.about-reviews__list {
+  padding: 0;
+  list-style: none;
+  margin: 0;
+}
+
+.about-rewiews__item {
+  font-size: 15px;
+  line-height: 200%;
+  color: var(--light-type);
+}
+
+.about-rewiews__blockquote {
+  margin: 0;
+}
+
+.about-rewiews__author {
+  font-style: normal;
+  font-size: 17px;
+  line-height: 176%;
+}
+
+.about-rewiews__author-name {
+  color: var(--basic-type);
+  font-weight: bold;
+  line-height: 141%;
+}

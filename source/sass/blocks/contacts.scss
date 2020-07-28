@@ -1,0 +1,17 @@
+.contacts__heading {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 167%;
+}
+
+.contacts__email,
+.contacts__address {
+  font-size: 15px;
+  line-height: 200%;
+  color: var(--light-type);
+}
+
+.contacts__link {
+  color: inherit;
+  text-decoration-color: var(--theme-lines);
+}

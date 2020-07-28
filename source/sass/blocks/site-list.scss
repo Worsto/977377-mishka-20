@@ -1,0 +1,26 @@
+.site-list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.site-list__link,
+.site-list__search-input::placeholder {
+  color: var(--basic-type);
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 141%;
+}
+
+.site-list__link,
+.site-list__search-input {
+  display: block;
+  text-decoration: none;
+  padding-top: 29px;
+  padding-bottom: 27px;
+  padding-left: 76px;
+  padding-right: 76px;
+  border-color: var(--thin-border);
+  border-top-style: solid;
+  border-top-width: 1px;
+}

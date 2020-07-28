@@ -1,0 +1,38 @@
+.featured__heading {
+  margin: 0;
+  font-weight: bold;
+  font-size: 25px;
+  line-height: 120%;
+}
+
+.featured__emphasis {
+  margin: 0;
+  color: var(--main-theme);
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 118%;
+  text-transform: uppercase;
+}
+
+.featured__description {
+  font-size: 15px;
+  color: var(--light-type);
+  line-height: 160%;
+}
+
+.featured__specifications-table {
+  font-size: 15px;
+  line-height: 133%;
+  color: var(--light-type);
+}
+
+.featured__table-heading {
+  font-weight: normal;
+}
+
+.featured__price {
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 141%;
+  color: var(--light-type);
+}
