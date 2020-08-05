@@ -1,5 +1,14 @@
 .category-list {
   list-style: none;
+  @media (min-width: $tablet-width) {
+    padding-right: 50px;
+    padding-left: 50px;
+    margin: 0;
+  }
+}
+
+.category-list__item {
+  flex-grow: 1;
 }
 
 .category-list__link {
