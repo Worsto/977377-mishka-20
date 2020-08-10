@@ -7,4 +7,31 @@
 .page__wrapper {
   padding-right: 30px;
   padding-left: 30px;
+  position: relative;
+}
+
+.page__heading {
+  margin: 0;
+  font-weight: bold;
+  font-size: 25px;
+  line-height: 120%;
+
+  @media (min-width: $tablet-width) {
+    font-size: 43px;
+    line-height: 116%;
+  }
+}
+
+.page__zigzag-line {
+  margin-bottom: 73px;
+  position: relative;
+  &::after{
+    content: '';
+    position: absolute;
+    bottom: -42px;
+    display: block;
+    width: 100%;
+    height: 6px;
+    background-image: url(../../img/bg-zigzag-line.svg);
+  }
 }

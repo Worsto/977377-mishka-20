@@ -1,0 +1,27 @@
+.size-list__item {
+  flex-grow: 1;
+  margin-right: 7px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.size-list__size-button {
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 94%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 52px;
+  border: 1px solid var(--thin-border);
+
+  .size-list__size-input:checked ~ & {
+    border-color: var(--main-theme)
+  }
+}
+
+.size-list__size-input:checked ~ .manufacturers-label::before {
+  background-image: url(../img/checkbox-on.svg);
+}

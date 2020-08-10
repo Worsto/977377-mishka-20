@@ -4,24 +4,33 @@
   margin: 0;
 }
 
-.about-rewiews__item {
+.about-reviews__item {
   font-size: 15px;
   line-height: 200%;
   color: var(--light-type);
 }
 
-.about-rewiews__blockquote {
+.about-reviews__blockquote {
   margin: 0;
+
+  & p {
+    margin-bottom: 30px;
+  }
 }
 
-.about-rewiews__author {
+.about-reviews__author {
   font-style: normal;
   font-size: 17px;
   line-height: 176%;
 }
 
-.about-rewiews__author-name {
+.about-reviews__author-name {
   color: var(--basic-type);
   font-weight: bold;
   line-height: 141%;
+}
+
+.about-reviews__buttons {
+  margin-top: 29px;
+  margin-bottom: 38px;
 }

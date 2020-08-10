@@ -1,11 +1,71 @@
-
-
 .about-advantages {
   list-style: none;
+  width: max-content;
+  margin-left: auto;
+  margin-right: auto;
+
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 .about-advantages__item {
   font-weight: bold;
   font-size: 17px;
   line-height: 118%;
+  display: block;
+
+  br {
+    display: none;
+  }
+
+  p {
+    margin-top: 0;
+    margin-bottom: 28px;
+  }
+
+  @media (min-width: $tablet-width) {
+  font-size: 20px;
+  line-height: 110%;
+  }
+}
+
+.about-adventages__icon-box {
+  margin-bottom: 10px;
+  margin-left: -5px;
+  min-height: 45px;
+  box-sizing: border-box;
+
+  & svg {
+    fill: var(--main-theme);
+  }
+}
+
+.about-advantages__eco {
+  padding-left: 13px;
+}
+
+.about-advantages__price {
+  padding-left: 5px;
+  padding-top: 1px;
+}
+
+.about-advantages__likes {
+  padding-left: 13px;
+  padding-top: 6px;
+}
+
+.about-advantages__handmade {
+  padding-left: 9px;
+  padding-top: 3px;
+}
+
+.about-advantages__domestic {
+  padding-top: 4px;
+}
+
+.about-advantages__package {
+  padding-left: 8px;
+  padding-top: 2px;
 }

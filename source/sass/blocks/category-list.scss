@@ -1,5 +1,6 @@
 .category-list {
   list-style: none;
+
   @media (min-width: $tablet-width) {
     padding-right: 50px;
     padding-left: 50px;
@@ -12,20 +13,39 @@
 }
 
 .category-list__link {
-  display: block;
+  display: flex;
+  justify-content: space-between;
   color: var(--basic-type-contrast);
   text-decoration: none;
   font-weight: bold;
   font-size: 19px;
   line-height: 126%;
-  padding-top: 24px;
+  padding-top: 26px;
   padding-bottom: 31px;
+  padding-right: 30px;
+  padding-left: 30px;
+
+  svg {
+    margin-bottom: -100px;
+    position: relative;
+    fill: var(--category-icon);
+  }
 }
 
 .category-list__interior-goods {
   background-color: var(--category-light-background);
+
+  svg {
+    bottom: 3px;
+    right: 6px;
+  }
 }
 
 .category-list__toys {
   background-color: var(--category-dark-background);
+
+  svg {
+    bottom: 5px;
+    left: 3px;
+  }
 }

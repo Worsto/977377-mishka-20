@@ -1,5 +1,24 @@
 .social__list {
   text-decoration: none;
+  list-style: none;
   padding: 0;
   margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  min-height: 80px;
+}
+
+.social__item {
+  width: 18vw;
+  text-align: center;
+}
+
+.social__link {
+  display: block;
+  width: auto;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
