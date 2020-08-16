@@ -9,16 +9,9 @@
   }
 }
 
-.main-nav__background {
-  @media (min-width: $tablet-width) {
-    background-color: var(--clear-background);
-    border-bottom: solid 1px var(--thin-border);
-  }
-}
-
 .main-nav__toggle {
   position: absolute;
-  top: -79px;
+  top: 0px;
   right: 0;
   z-index: 2;
   display: block;
