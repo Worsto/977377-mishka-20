@@ -1,12 +1,41 @@
 .about__advantages {
   padding: 0;
   margin-bottom: 57px;
-}
 
-.about__advantages-heading {
-  margin-bottom: 28px;
+  @media (max-width: $mobile-width-only) {
+    max-width: 260px;
+  }
 }
 
 .about__reviews-box {
   padding-bottom: 9px;
+  max-width: 1050px;
+
+  @media (min-width: $tablet-width) {
+    position: relative;
+    margin: 0 auto;
+    text-shadow: -1px -1px 3px var(--clear-background), 2px 2px 0 var(--clear-background);
+    padding-bottom: 25px;
+
+    &::before {
+      content: '';
+      position: absolute;
+      display: block;
+      left: 0;
+      height: 100%;
+      width: 350px;
+      background-image: url(../../img/review@1x.jpg);
+      background-repeat: no-repeat;
+    }
+  }
+}
+
+.about__reviews {
+  @media (min-width: $tablet-width) {
+    padding-top: 79px;
+    padding-bottom: 38px;
+    display: grid;
+    grid-template-columns: 1fr 175px;
+    grid-template-rows: repeat(3, min-content);
+  }
 }

@@ -8,6 +8,19 @@
   padding-right: 30px;
   padding-left: 30px;
   position: relative;
+  margin: 0 auto;
+
+  @media (max-width: $mobile-width-only) {
+    max-width: 320px;
+  }
+
+  @media (min-width: $tablet-width) {
+    max-width: 668px;
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: 1050px;
+  }
 }
 
 .page__heading {
@@ -22,6 +35,12 @@
   }
 }
 
+.page__list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
 .page__zigzag-line {
   margin-bottom: 73px;
   position: relative;
@@ -33,5 +52,16 @@
     width: 100%;
     height: 6px;
     background-image: url(../../img/bg-zigzag-line.svg);
+    background-repeat: repeat no-repeat;
+  }
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 125px;
+
+    &::after {
+      height: 17px;
+      background-size: 38.5px;
+      bottom: -70px;
+    }
   }
 }

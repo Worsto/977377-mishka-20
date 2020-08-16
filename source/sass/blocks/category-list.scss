@@ -4,12 +4,15 @@
   @media (min-width: $tablet-width) {
     padding-right: 50px;
     padding-left: 50px;
-    margin: 0;
+    margin-bottom: 0;
   }
 }
 
 .category-list__item {
-  flex-grow: 1;
+  @media (min-width: $tablet-width) {
+    flex-basis: 334px;
+    flex-grow: 1;
+  }
 }
 
 .category-list__link {
@@ -22,12 +25,23 @@
   line-height: 126%;
   padding-top: 26px;
   padding-bottom: 31px;
-  padding-right: 30px;
+  padding-right: 100px;
   padding-left: 30px;
+  position: relative;
+  margin: 0 auto;
+
+  @media (max-width: $mobile-width-only) {
+    max-width: 320px;
+  }
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 150%;
+    padding-left: 36px;
+  }
 
   svg {
-    margin-bottom: -100px;
-    position: relative;
+    position: absolute;
     fill: var(--category-icon);
   }
 }
@@ -36,8 +50,13 @@
   background-color: var(--category-light-background);
 
   svg {
-    bottom: 3px;
-    right: 6px;
+    top: 23px;
+    right: 36px;
+
+    @media (min-width: $tablet-width) {
+      top: 30px;
+      right: 37px;
+    }
   }
 }
 
@@ -45,7 +64,11 @@
   background-color: var(--category-dark-background);
 
   svg {
-    bottom: 5px;
-    left: 3px;
+    top: 21px;
+    right: 27px;
+    @media (min-width: $tablet-width) {
+      top: 32px;
+      right: 34px;
+    }
   }
 }

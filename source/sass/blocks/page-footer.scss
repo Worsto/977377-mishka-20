@@ -1,5 +1,17 @@
 .page-footer {
   background-color: var(--light-background);
+
+  @media (min-width: $tablet-width) {
+    padding-top: 36px;
+    padding-bottom: 27px;
+  }
+}
+
+.page-footer__wrapper {
+  @media (min-width: $tablet-width) {
+    display: flex;
+    justify-content: space-between;
+  }
 }
 
 .page-footer__social::after {
@@ -8,4 +20,18 @@
   height: 1px;
   width: 100%;
   background-color: var(--footer-mobile-divider);
+
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
+}
+
+.page-footer__logo {
+  display: flex;
+  padding-bottom: 16px;
+  margin-right: 75px;
+
+  @media (max-width: $mobile-width-only) {
+    display: none;
+  }
 }

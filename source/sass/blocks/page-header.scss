@@ -3,26 +3,92 @@
   margin-bottom: 31px;
 
   @media (min-width: $tablet-width) {
+    background-image: url("../img/hero-mobile@1x.jpg");
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 54px;
+
+    &::after {
+      content: '';
+      position: absolute;
+      display: block;
+      width: 100%;
+      height: 24px;
+      bottom: -14px;
+      background-image: url(../../img/bg-zigzag-fill.svg);
+      background-size: 38.45px auto;
+      background-position: center;
+    }
+  }
+}
+
+.page-header__top-bar {
+  position: relative;
+}
+
+.page-header__wrapper{
+  position: relative;
+
+  @media (min-width: $tablet-width) {
+    width: 100%;
+  }
+}
+
+.page-header__sub-wrapper {
+  @media (min-width: $tablet-width) {
+    width: 668px;
+    margin: 0 auto;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 1050px;
+  }
+}
+
+.page-header__logo-box {
+  @media (min-width: $tablet-width) {
+    position: absolute;
+    z-index: 1;
+  }
+}
+
+.page-header__logo-sub-box {
+  @media (min-width: $desktop-width) {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
   }
 }
 
 .page-header__logo {
   display: block;
-  text-align: center;
+  min-height: 79px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   @media (min-width: $tablet-width) {
-    padding-left: 20px;
-    flex-grow: 1;
-    text-align: left;
+    justify-content: start;
+    max-width: 113px;
+    min-height: 89px;
+    margin-left: -1px;
+  }
+
+  @media (min-width: $desktop-width) {
+    justify-content: center;
+    max-width: 148px;
   }
 }
 
 .page-header__logo-image {
-  padding-top: 22px;
-  padding-bottom: 19px;
+  @media (min-width: $tablet-width) {
+    height: auto;
+    width: 112.4px;
+    margin-top: 4px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 148px;
+  }
 }
 
 .page-header__heading,
@@ -45,40 +111,35 @@
 }
 
 .page-header__emphasis {
-  padding-bottom: 122px;
+  padding-bottom: 123px;
   box-sizing: border-box;
   min-height: 282px;
 
+  @media (max-width: $mobile-width-only) {
+    background-image: url("../img/hero-mobile@1x.jpg");
+    background-position: center -18px;
+  }
+
   @media (min-width: $tablet-width) {
-    min-height: 626px;
+    min-height: 562px;
     font-size: 43px;
     line-height: 116%;
-  }
-}
-
-.page-header__greeting-box {
-  background-image: url("../img/hero-mobile@1x.jpg");
-  background-repeat: no-repeat;
-  background-position: center -18px;
-  width: 100%;
-  box-sizing: border-box;
-
-  @media (min-width: 570px) {
-    background-size: cover;
-    background-position: center -78px;
-  }
-
-  @media (min-width: $tablet-width) {
-    background-position: center;
+    padding-top: 92px;
   }
 }
 
 .page-header__category-list {
   padding: 0;
-  margin: 0;
+  margin: 0 auto;
   margin-bottom: 31px;
+
 
   @media (min-width: $tablet-width) {
     display: flex;
+    width: 668px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 1050px;
   }
 }

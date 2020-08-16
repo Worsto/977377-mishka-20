@@ -1,7 +1,19 @@
+.about-reviews__heading {
+  @media (min-width: $tablet-width) {
+    margin-top: 4px;
+    margin-bottom: 24px;
+  }
+}
+
 .about-reviews__list {
   padding: 0;
   list-style: none;
   margin: 0;
+
+  @media (min-width: $tablet-width) {
+    grid-column: 1 / -1;
+    grid-row: 2 / -1;
+  }
 }
 
 .about-reviews__item {
@@ -15,6 +27,12 @@
 
   & p {
     margin-bottom: 30px;
+
+    @media (min-width: $tablet-width) {
+      font-size: 17px;
+      line-height: 176%;
+      margin-bottom: 61px;
+    }
   }
 }
 
@@ -28,9 +46,29 @@
   color: var(--basic-type);
   font-weight: bold;
   line-height: 141%;
+
+  @media (min-width: $tablet-width) {
+    font-size: 18px;
+    line-height: 133%;
+  }
 }
 
 .about-reviews__buttons {
   margin-top: 29px;
   margin-bottom: 38px;
+  grid-row: 3 / -1;
+  grid-column: 2 / -1;
+
+  @media (min-width: $tablet-width) {
+    margin: 0;
+    margin-bottom: 3px;
+  }
+}
+
+.about-reviews__write-button {
+  @media (min-width: $tablet-width) {
+    grid-row: 1 / 2;
+    grid-column: 2 / -1;
+    margin-bottom: auto;
+  }
 }
