@@ -1,0 +1,38 @@
+.form-color {
+  @media (min-width: $tablet-width) {
+    background-color: var(--light-background);
+  }
+}
+
+.form-color__fieldset {
+  @media (max-width: $mobile-width-only) {
+    padding-top: 25px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-right: 108px;
+  }
+}
+
+.form-color__list {
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 22px;
+    grid-row-gap: 24px;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.form-color__legend {
+  padding-right: 15px;
+}
+
+.form-color__list-item:not(:last-child) {
+  @media (max-width: $mobile-width-only) {
+    margin-bottom: 23px;
+  }
+}

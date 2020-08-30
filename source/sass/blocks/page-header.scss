@@ -1,29 +1,48 @@
 .page-header {
   position: relative;
-  margin-bottom: 31px;
 
   @media (min-width: $tablet-width) {
+    background-color: #F9F9F9;
     background-image: url("../img/hero-mobile@1x.jpg");
     background-size: cover;
     background-position: center;
-    margin-bottom: 54px;
+    background-repeat: no-repeat;
+    margin-top: 89px;
 
-    &::after {
+    &--inner {
+      margin-top: 0;
+      background-image: none;
+      background-color: var(--light-background);
+
+      .top-bar {
+        position: static;
+      }
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    background-size: contain;
+  }
+
+  &::after {
+    @media (min-width: $tablet-width) {
       content: '';
       position: absolute;
       display: block;
       width: 100%;
       height: 24px;
       bottom: -14px;
-      background-image: url(../../img/bg-zigzag-fill.svg);
-      background-size: 38.45px auto;
+      background-image: url("data:image/svg+xml,%3Csvg width='38.43' height='24' viewBox='0 0 38.43 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M19.2165 9.88235C28.7913 9.88235 28.7913 0 38.433 0V24H0V0C9.57478 0 9.57475 9.88235 19.2165 9.88235Z' fill='%23ffffff'/%3E%3C/svg%3E");
       background-position: center;
     }
-  }
-}
 
-.page-header__top-bar {
-  position: relative;
+    @media (min-width: $desktop-width) {
+      background-image: url("data:image/svg+xml,%3Csvg width='62.39' height='34' viewBox='0 0 62.39 34' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M31.1956 14C46.739 14 46.7391 0 62.3912 0V34H0V0C15.5435 0 15.5434 14 31.1956 14Z' fill='%23ffffff'/%3E%3C/svg%3E");
+      height: 34px;
+      background-repeat: repeat no-repeat;
+      bottom: -19px;
+    }
+  }
 }
 
 .page-header__wrapper{
@@ -34,38 +53,6 @@
   }
 }
 
-.page-header__logo {
-  display: block;
-  min-height: 79px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  @media (min-width: $tablet-width) {
-    justify-content: start;
-    max-width: 113px;
-    min-height: 89px;
-    margin-left: -1px;
-  }
-
-  @media (min-width: $desktop-width) {
-    justify-content: center;
-    max-width: 148px;
-  }
-}
-
-.page-header__logo-image {
-  @media (min-width: $tablet-width) {
-    height: auto;
-    width: 112.4px;
-    margin-top: 4px;
-  }
-
-  @media (min-width: $desktop-width) {
-    width: 148px;
-  }
-}
-
 .page-header__heading,
 .page-header__emphasis {
   margin: 0;
@@ -73,48 +60,50 @@
   font-size: 27px;
   line-height: 111%;
   padding-top: 73px;
-  padding-bottom: 73px;
+  padding-bottom: 74px;
   padding-right: 36px;
   padding-left: 36px;
   text-align: center;
   width: 100%;
   box-sizing: border-box;
+
+  @media (min-width: $tablet-width) {
+    font-size: 43px;
+    line-height: 116%;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 53px;
+    line-height: 108%;
+  }
 }
 
 .page-header__heading {
   background-color: var(--light-background);
+
+  @media (min-width: $tablet-width) {
+    padding-top: 37px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-bottom: 94px;
+  }
 }
 
 .page-header__emphasis {
-  padding-bottom: 123px;
+  padding-bottom: 122px;
   box-sizing: border-box;
   min-height: 282px;
 
   @media (max-width: $mobile-width-only) {
+    background-color: #F9F9F9;
     background-image: url("../img/hero-mobile@1x.jpg");
     background-position: center -18px;
+    background-repeat: no-repeat;
   }
 
   @media (min-width: $tablet-width) {
-    min-height: 562px;
-    font-size: 43px;
-    line-height: 116%;
-    padding-top: 92px;
-  }
-}
-
-.page-header__category-list {
-  padding: 0;
-  margin: 0 auto;
-  margin-bottom: 31px;
-
-
-  @media (min-width: $tablet-width) {
-    display: flex;
-    width: 668px;
-  }
-
-  @media (min-width: $desktop-width) {
-    width: 1050px;
+    padding-top: 3px;
+    min-height: 473px;
   }
 }

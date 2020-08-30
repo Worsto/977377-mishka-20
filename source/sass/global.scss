@@ -25,6 +25,10 @@ img {
   height: auto;
 }
 
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
 .visually-hidden:not(:focus):not(:active),
 input[type="checkbox"].visually-hidden,
 input[type="radio"].visually-hidden {
@@ -61,4 +65,15 @@ input[type="radio"].visually-hidden {
   font-family: inherit;
   width: 100%;
   box-sizing: border-box;
+  letter-spacing: -0.5px;
+  transition: .15s;
+
+  &:hover, &:focus {
+    color: var(--contrast-type);
+    background-color: var(--button-hover-background);
+  }
+
+  &:active {
+    color: var(--contrast-type-down);
+  }
 }

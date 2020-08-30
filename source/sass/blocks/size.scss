@@ -1,4 +1,4 @@
-.size-list__item {
+.size__list-item {
   flex-grow: 1;
   margin-right: 7px;
 
@@ -7,7 +7,7 @@
   }
 }
 
-.size-list__size-button {
+.size__button {
   font-weight: bold;
   font-size: 17px;
   line-height: 94%;
@@ -17,11 +17,19 @@
   min-height: 52px;
   border: 1px solid var(--thin-border);
 
-  .size-list__size-input:checked ~ & {
-    border-color: var(--main-theme)
+  .size__input:checked ~ & {
+    border-color: var(--main-theme);
+  }
+
+  &:hover {
+    border-color: var(--modal-button-hover);
+  }
+
+  .size__input:checked ~ &:hover {
+    border-color: var(--modal-button-hover);
   }
 }
 
-.size-list__size-input:checked ~ .manufacturers-label::before {
+.size__input:checked ~ .manufacturers-label::before {
   background-image: url(../img/checkbox-on.svg);
 }

@@ -10,6 +10,18 @@
   svg {
     fill: var(--main-theme);
   }
+
+  &:hover, &:focus {
+    svg {
+      fill: var(--main-theme-dark);
+    }
+  }
+
+  &:active {
+    svg {
+      opacity: var(--link-opacity-down);
+    }
+  }
 }
 
 .copyright__text {
@@ -18,4 +30,3 @@
   line-height: 95%;
   margin-right: 27px;
 }
-
