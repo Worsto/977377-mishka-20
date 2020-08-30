@@ -9,13 +9,12 @@
   color: inherit;
   height: 100%;
 
-  @media (min-width: $tablet-width) and (max-width: $desktop-width){
+  @media (min-width: $tablet-width) and (max-width: $desktop-width) {
     flex-direction: row;
   }
 
-
-
-  &:hover, &:focus {
+  &:hover,
+  &:focus {
     .catalog-item__heading {
       color: var(--link-type-hover);
     }
@@ -157,13 +156,14 @@
   margin-right: -27px;
   position: absolute;
   right: 28px;
-  bottom: 0px;
+  bottom: 0;
 
   @media (max-width: $mobile-width-only) {
     right: 22px;
   }
 
-  &:hover, &:focus {
+  &:hover,
+  &:focus {
     .catalog-item__icon {
       opacity: 1;
       fill: var(--main-theme);

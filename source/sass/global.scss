@@ -25,7 +25,9 @@ img {
   height: auto;
 }
 
-*, *:before, *:after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
@@ -66,9 +68,10 @@ input[type="radio"].visually-hidden {
   width: 100%;
   box-sizing: border-box;
   letter-spacing: -0.5px;
-  transition: .15s;
+  transition: 0.15s;
 
-  &:hover, &:focus {
+  &:hover,
+  &:focus {
     color: var(--contrast-type);
     background-color: var(--button-hover-background);
   }

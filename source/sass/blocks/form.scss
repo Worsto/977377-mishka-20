@@ -135,7 +135,7 @@
 
   @media (min-width: $tablet-width) {
     position: absolute;
-    left: 0px;
+    left: 0;
     top: 18px;
   }
 
@@ -155,7 +155,7 @@
   cursor: pointer;
 
   &::before {
-    content: '';
+    content: "";
     display: block;
     height: 40px;
     width: 40px;
@@ -167,7 +167,7 @@
   }
 
   &::after {
-    content: '';
+    content: "";
     display: none;
     height: 16px;
     width: 16px;
@@ -220,7 +220,7 @@
   cursor: pointer;
 
   &::before {
-    content: '';
+    content: "";
     display: block;
     height: 38px;
     width: 38px;
@@ -231,7 +231,7 @@
   }
 
   &::after {
-    content: '';
+    content: "";
     display: none;
     height: 12px;
     width: 22px;
@@ -285,6 +285,18 @@
     padding-top: 16px;
     padding-bottom: 15px;
     padding-left: 17px;
+  }
+
+
+  &:hover,
+  &:focus,
+  &:active {
+    border-color: var(--theme-lines);
+
+    & + svg {
+      opacity: 1;
+      fill: var(--theme-icons);
+    }
   }
 }
 
@@ -347,26 +359,17 @@
   }
 }
 
-.form__radio-input, .form__checkbox-input {
-  &:hover, &:focus {
+.form__radio-input,
+.form__checkbox-input {
+  &:hover,
+  &:focus {
     &::before {
-      border-color: var(--theme-lines)
+      border-color: var(--theme-lines);
     }
   }
 
   &:active::before {
     border-color: var(--basic-border);
     opacity: var(--link-opacity-down);
-  }
-}
-
-.form__text-input {
-  &:hover, &:focus, &:active {
-    border-color: var(--theme-lines);
-
-    & + svg {
-      opacity: 1;
-      fill: var(--theme-icons);
-    }
   }
 }

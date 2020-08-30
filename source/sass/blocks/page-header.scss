@@ -2,7 +2,7 @@
   position: relative;
 
   @media (min-width: $tablet-width) {
-    background-color: #F9F9F9;
+    background-color: #f9f9f9;
     background-image: url("../img/hero-mobile@1x.jpg");
     background-size: cover;
     background-position: center;
@@ -26,7 +26,7 @@
 
   &::after {
     @media (min-width: $tablet-width) {
-      content: '';
+      content: "";
       position: absolute;
       display: block;
       width: 100%;
@@ -45,7 +45,7 @@
   }
 }
 
-.page-header__wrapper{
+.page-header__wrapper {
   position: relative;
 
   @media (min-width: $tablet-width) {
@@ -96,7 +96,7 @@
   min-height: 282px;
 
   @media (max-width: $mobile-width-only) {
-    background-color: #F9F9F9;
+    background-color: #f9f9f9;
     background-image: url("../img/hero-mobile@1x.jpg");
     background-position: center -18px;
     background-repeat: no-repeat;

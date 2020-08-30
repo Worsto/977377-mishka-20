@@ -30,7 +30,8 @@
     min-height: 455px;
   }
 
-  &:hover, &:focus {
+  &:hover,
+  &:focus {
     .catalog-video__heading {
       color: var(--link-type-hover);
     }
@@ -99,7 +100,7 @@
   }
 
   &::before {
-    content: url(../../img/icon-video.svg);
+    content: url("../../img/icon-video.svg");
     margin-right: 25px;
     transform: translateY(2px);
 
@@ -143,6 +144,7 @@
   padding-top: 35px;
   padding-bottom: 125px;
   padding-right: 29px;
+
   @media (max-width: $mobile-width-only) {
     border-top: none;
   }

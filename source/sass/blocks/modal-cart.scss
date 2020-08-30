@@ -17,10 +17,6 @@
   }
 }
 
-.modal-cart__legend {
-  text-align: center;
-}
-
 .modal-cart__form {
   fieldset {
     border: none;
@@ -31,6 +27,7 @@
 }
 
 .modal-cart__legend {
+  text-align: center;
   font-size: 15px;
   line-height: 200%;
   color: var(--light-type);

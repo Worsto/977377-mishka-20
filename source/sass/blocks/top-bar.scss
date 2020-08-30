@@ -21,7 +21,7 @@
 
 .top-bar__toggle {
   position: absolute;
-  top: 0px;
+  top: 0;
   right: 0;
   z-index: 2;
   display: block;
@@ -31,6 +31,10 @@
   cursor: pointer;
   border: none;
   background-color: transparent;
+
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
 
   &:hover,
   &:active {
@@ -57,7 +61,7 @@
 }
 
 @media (max-width: $mobile-width-only) {
-.top-bar--closed .top-bar__list-item {
+  .top-bar--closed .top-bar__list-item {
     display: none;
   }
 
@@ -109,7 +113,6 @@
 }
 
 .top-bar__logo {
-  display: block;
   min-height: 79px;
   display: flex;
   justify-content: center;
@@ -129,6 +132,15 @@
   @media (min-width: $desktop-width) {
     width: 184px;
     margin-right: 84px;
+  }
+
+  &:hover,
+  &:focus {
+    opacity: var(--link-opacity-hover);
+  }
+
+  &:active {
+    opacity: var(--link-opacity-down);
   }
 }
 
@@ -272,12 +284,6 @@
   }
 }
 
-.top-bar__toggle {
-  @media (min-width: $tablet-width) {
-    display: none;
-  }
-}
-
 .top-bar__tablet-bar {
   @media (min-width: $tablet-width) {
     order: 1;
@@ -380,20 +386,11 @@
   }
 }
 
-.top-bar__logo {
-  &:hover, &:focus {
-    opacity: var(--link-opacity-hover);
-  }
-
-  &:active {
-    opacity: var(--link-opacity-down);
-  }
-}
-
 .top-bar__main-link,
 .top-bar__extra-link,
 .top-bar__cart-link {
-  &:hover, &:focus {
+  &:hover,
+  &:focus {
     color: var(--link-type-hover);
 
     .top-bar__icon {
@@ -404,6 +401,7 @@
 
   &:active {
     color: var(--link-type-down);
+
     .top-bar__icon {
       opacity: var(--link-opacity-down);
     }

@@ -11,7 +11,8 @@
     fill: var(--main-theme);
   }
 
-  &:hover, &:focus {
+  &:hover,
+  &:focus {
     svg {
       fill: var(--main-theme-dark);
     }

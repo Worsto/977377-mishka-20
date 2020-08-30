@@ -28,7 +28,8 @@
     display: none;
   }
 
-  &:hover, &:focus {
+  &:hover,
+  &:focus {
     .page-footer__logo-image {
       fill: var(--main-theme-dark);
     }
