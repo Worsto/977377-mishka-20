@@ -4,15 +4,29 @@
   --decorative-divider: var(--light-background);
   --footer-mobile-divider: #e5e5e5;
   --main-theme: #63d1bb;
+  --main-theme-dark: #46c1ae;
   --theme-lines: #62d1ba;
+  --theme-lines-dark: var(--main-theme-dark);
+  --theme-icons: var(--theme-lines);
   --category-light-background: var(--main-theme);
   --category-dark-background: #56c3b2;
   --category-icon: #149080;
   --basic-type: #000000;
-  --basic-type-contrast: #ffffff;
+  --contrast-type: #ffffff;
   --light-type: #444444;
   --basic-border: var(--light-type);
+  --button-hover-background: var(--light-type);
+  --contrast-border: var(--basic-type);
   --thin-border: #ececec;
+  --link-type-hover: #00000099;
   --link-opacity-hover: 0.6;
+  --link-type-down: #0000004d;
+  --contrast-type-down: #ffffff4d;
   --link-opacity-down: 0.3;
+  --modal-button-hover: #4444444d;
 }
+
+
+$tablet-width: 768px;
+$desktop-width: 1150px;
+$mobile-width-only: 767px;

@@ -1,0 +1,27 @@
+.form-tel {
+  @media (min-width: $tablet-width) {
+    background-color: var(--light-background);
+  }
+}
+
+.form-tel__legend {
+  padding-right: 27px;
+}
+
+.form-tel__input {
+  padding-bottom: 15px;
+  padding-top: 15px;
+
+  @media (max-width: $mobile-width-only) {
+    padding-bottom: 17px;
+  }
+}
+
+.form-tel__input::placeholder {
+  letter-spacing: -1px;
+}
+
+.form-tel__icon {
+  margin-bottom: 2px;
+  margin-right: 4px;
+}

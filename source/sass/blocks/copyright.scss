@@ -1,5 +1,33 @@
+.copyright__link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: var(--basic-type);
+  min-height: 78px;
+  width: 100%;
+
+  svg {
+    fill: var(--main-theme);
+  }
+
+  &:hover,
+  &:focus {
+    svg {
+      fill: var(--main-theme-dark);
+    }
+  }
+
+  &:active {
+    svg {
+      opacity: var(--link-opacity-down);
+    }
+  }
+}
+
 .copyright__text {
   font-weight: bold;
   font-size: 19px;
   line-height: 95%;
+  margin-right: 27px;
 }

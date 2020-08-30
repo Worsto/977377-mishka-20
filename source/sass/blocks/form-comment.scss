@@ -1,0 +1,27 @@
+.form-comment__fieldset {
+  @media (max-width: $mobile-width-only) {
+    padding-top: 23px;
+  }
+}
+
+.form-comment__legend {
+  padding-right: 20px;
+  top: 20px;
+}
+
+.form-comment__input {
+  resize: none;
+  min-height: 142px;
+  box-sizing: border-box;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  padding-left: 15px;
+  padding-right: 15px;
+  border-style: solid;
+  border-width: 2px;
+  border-color: var(--basic-border);
+
+  &::placeholder {
+    letter-spacing: 0.5px;
+  }
+}

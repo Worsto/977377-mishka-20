@@ -1,0 +1,35 @@
+.size__list-item {
+  flex-grow: 1;
+  margin-right: 7px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.size__button {
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 94%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 52px;
+  border: 1px solid var(--thin-border);
+
+  .size__input:checked ~ & {
+    border-color: var(--main-theme);
+  }
+
+  &:hover {
+    border-color: var(--modal-button-hover);
+  }
+
+  .size__input:checked ~ &:hover {
+    border-color: var(--modal-button-hover);
+  }
+}
+
+.size__input:checked ~ .manufacturers-label::before {
+  background-image: url("../img/checkbox-on.svg");
+}

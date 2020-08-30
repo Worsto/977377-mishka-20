@@ -1,37 +1,109 @@
-.page-header__logo {
-  display: block;
+.page-header {
+  position: relative;
+
+  @media (min-width: $tablet-width) {
+    background-color: #f9f9f9;
+    background-image: url("../img/hero-mobile@1x.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-top: 89px;
+
+    &--inner {
+      margin-top: 0;
+      background-image: none;
+      background-color: var(--light-background);
+
+      .top-bar {
+        position: static;
+      }
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    background-size: contain;
+  }
+
+  &::after {
+    @media (min-width: $tablet-width) {
+      content: "";
+      position: absolute;
+      display: block;
+      width: 100%;
+      height: 24px;
+      bottom: -14px;
+      background-image: url("data:image/svg+xml,%3Csvg width='38.43' height='24' viewBox='0 0 38.43 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M19.2165 9.88235C28.7913 9.88235 28.7913 0 38.433 0V24H0V0C9.57478 0 9.57475 9.88235 19.2165 9.88235Z' fill='%23ffffff'/%3E%3C/svg%3E");
+      background-position: center;
+    }
+
+    @media (min-width: $desktop-width) {
+      background-image: url("data:image/svg+xml,%3Csvg width='62.39' height='34' viewBox='0 0 62.39 34' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M31.1956 14C46.739 14 46.7391 0 62.3912 0V34H0V0C15.5435 0 15.5434 14 31.1956 14Z' fill='%23ffffff'/%3E%3C/svg%3E");
+      height: 34px;
+      background-repeat: repeat no-repeat;
+      bottom: -19px;
+    }
+  }
 }
 
-.page-header__logo-image {
-  display: block;
-  margin: 0 auto;
-  padding-top: 22px;
-  padding-bottom: 22px;
+.page-header__wrapper {
+  position: relative;
+
+  @media (min-width: $tablet-width) {
+    width: 100%;
+  }
 }
 
 .page-header__heading,
 .page-header__emphasis {
   margin: 0;
-  background-color: var(--light-background);
   font-weight: bold;
   font-size: 27px;
   line-height: 111%;
   padding-top: 73px;
-  padding-bottom: 73px;
+  padding-bottom: 74px;
   padding-right: 36px;
   padding-left: 36px;
   text-align: center;
+  width: 100%;
+  box-sizing: border-box;
+
+  @media (min-width: $tablet-width) {
+    font-size: 43px;
+    line-height: 116%;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 53px;
+    line-height: 108%;
+  }
+}
+
+.page-header__heading {
+  background-color: var(--light-background);
+
+  @media (min-width: $tablet-width) {
+    padding-top: 37px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-bottom: 94px;
+  }
 }
 
 .page-header__emphasis {
-  background-image: url("../img/hero-mobile@1x.jpg");
-  padding-bottom: 120px;
-  background-repeat: no-repeat;
-  background-position: center;
-}
+  padding-bottom: 122px;
+  box-sizing: border-box;
+  min-height: 282px;
 
-.page-header__category-list {
-  padding: 0;
-  margin: 0;
-  margin-bottom: 31px;
+  @media (max-width: $mobile-width-only) {
+    background-color: #f9f9f9;
+    background-image: url("../img/hero-mobile@1x.jpg");
+    background-position: center -18px;
+    background-repeat: no-repeat;
+  }
+
+  @media (min-width: $tablet-width) {
+    padding-top: 3px;
+    min-height: 473px;
+  }
 }

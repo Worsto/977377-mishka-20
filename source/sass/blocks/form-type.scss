@@ -1,0 +1,13 @@
+.form-type__fieldset {
+  @media (max-width: $mobile-width-only) {
+    padding-top: 31px;
+  }
+}
+
+.form-type__list-item:not(:last-child) {
+  margin-bottom: 13px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 24px;
+  }
+}

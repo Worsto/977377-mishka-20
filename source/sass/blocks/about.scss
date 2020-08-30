@@ -1,9 +1,25 @@
-.about__heading {
-  font-weight: bold;
-  font-size: 25px;
-  line-height: 120%;
+.about__advantages {
+  @media (min-width: $desktop-width) {
+    padding-right: 176px;
+  }
 }
 
-.about__advantages {
-  padding: 0;
+.about__reviews-box {
+  max-width: 1050px;
+
+  @media (min-width: $tablet-width) {
+    position: relative;
+    margin: 0 auto;
+
+    &::before {
+      content: "";
+      position: absolute;
+      display: block;
+      left: 0;
+      height: 100%;
+      width: 350px;
+      background-image: url("../../img/review@1x.jpg");
+      background-repeat: no-repeat;
+    }
+  }
 }

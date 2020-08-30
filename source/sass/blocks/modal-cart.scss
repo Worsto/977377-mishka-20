@@ -4,30 +4,49 @@
   line-height: 120%;
   text-align: center;
   text-transform: uppercase;
+  margin-bottom: 14px;
+  margin-top: 0;
+
+  @media (min-width: 500px) {
+    font-size: 30px;
+    line-height: 190%;
+
+    br {
+      display: none;
+    }
+  }
 }
 
 .modal-cart__form {
   fieldset {
     border: none;
     padding: 0;
+    max-width: 350px;
+    margin: 0 auto;
   }
 }
 
 .modal-cart__legend {
+  text-align: center;
   font-size: 15px;
   line-height: 200%;
   color: var(--light-type);
+  margin-bottom: 22px;
 }
 
 .modal-cart__list {
+  display: flex;
   list-style: none;
   padding: 0;
   margin: 0;
+  justify-content: space-between;
+  margin-bottom: 31px;
 }
 
 .modal-cart__button {
   background-color: var(--main-theme);
   border-color: var(--main-theme);
   border-style: solid;
-  color: var(--basic-type-contrast);
+  color: var(--contrast-type);
+  max-width: 350px;
 }

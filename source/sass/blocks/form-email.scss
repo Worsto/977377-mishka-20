@@ -1,0 +1,14 @@
+.form-email {
+  @media (min-width: $tablet-width) {
+    background-color: var(--light-background);
+  }
+}
+
+.form-email__legend {
+  padding-right: 20px;
+}
+
+.form-email__input {
+  padding-bottom: 15px;
+  padding-top: 15px;
+}
