@@ -125,7 +125,7 @@
     <section class="catalog-video">
       <div class="page__wrapper catalog-video__box">
         <a href="blank.html" class="catalog-video__link">
-          <img class="catalog-video__frame" src="img/video.jpg" alt="Превью видеоролика о производстве вязанной корзинки">
+          <img class="catalog-video__frame" src="img/video-mobile@1x.jpg" alt="Превью видеоролика о производстве вязанной корзинки">
           <h2 class="catalog-video__heading">Процесс производства</h2>
           <p class="catalog-video__description">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
         </a>
@@ -207,42 +207,6 @@
     </div>
   </section>
 
-  <script src="js/script.js">
-    var navMain = document.querySelector('.top-bar');
-    var navToggle = document.querySelector('.top-bar__toggle');
-
-    navMain.classList.remove('top-bar--nojs');
-    navMain.classList.add('top-bar--closed');
-    navMain.classList.remove('top-bar--opened');
-
-    navToggle.addEventListener('click', function() {
-      if (navMain.classList.contains('top-bar--closed')) {
-        navMain.classList.remove('top-bar--closed');
-        navMain.classList.add('top-bar--opened');
-      } else {
-        navMain.classList.add('top-bar--closed');
-        navMain.classList.remove('top-bar--opened');
-      }
-    });
-
-    // modal
-    let toCartButtons = document.querySelectorAll(".featured__button, .catalog-item__button");
-    let cartPopup = document.querySelector(".modal-cart");
-    let cartClose = cartPopup.querySelector(".modal-cart__button");
-    let sizeSelection = cartPopup.querySelector(".size__button")
-
-    for (let i = 0; i < toCartButtons.length; i++) {
-        toCartButtons[i].addEventListener("click", function (evt) {
-            evt.preventDefault();
-            cartPopup.classList.add("modal--active");
-            sizeSelection.focus();
-        });
-    }
-
-    cartClose.addEventListener("click", function (evt) {
-        evt.preventDefault();
-        cartPopup.classList.remove("modal--active");
-    });
-  </script>
+  <script src="js/script.js"></script>
 </body>
 </html>

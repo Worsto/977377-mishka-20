@@ -17,7 +17,7 @@ navToggle.addEventListener('click', function() {
 });
 
 // modal
-let toCartButtons = document.querySelectorAll(".featured__button, .catalog-item__button");
+let toCartButtons = document.querySelectorAll(".featured__button, .catalog-item__button, .catalog-video__button");
 let cartPopup = document.querySelector(".modal-cart");
 let cartClose = cartPopup.querySelector(".modal-cart__button");
 let sizeSelection = cartPopup.querySelector(".size__button")
