@@ -15,50 +15,14 @@
 
 .catalog-video__box {
   position: relative;
-}
-
-.catalog-video__link {
   display: flex;
   flex-direction: column;
-  text-decoration: none;
-  color: inherit;
 
   @media (min-width: $desktop-width) {
     display: grid;
     grid-template-columns: 683px 1fr;
     grid-template-rows: 158px 1fr;
     min-height: 455px;
-  }
-
-  &:hover,
-  &:focus {
-    .catalog-video__heading {
-      color: var(--link-type-hover);
-    }
-
-    .catalog-video__description {
-      @media (min-width: $tablet-width) {
-        box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
-      }
-
-      @media (min-width: $desktop-width) {
-        box-shadow: 6px 0 10px rgba(0, 0, 0, 0.1);
-      }
-    }
-  }
-
-  &:active {
-    .catalog-video__heading {
-      color: var(--link-type-down);
-    }
-
-    @media (min-width: $tablet-width) {
-      box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
-    }
-
-    @media (min-width: $desktop-width) {
-      box-shadow: 3px 0 5px rgba(0, 0, 0, 0.1);
-    }
   }
 }
 
@@ -85,8 +49,6 @@
     padding: 35px;
     padding-left: 41px;
     padding-bottom: 9px;
-    border: none;
-    margin-bottom: -81px;
   }
 
   @media (min-width: $desktop-width) {
@@ -134,35 +96,43 @@
   }
 }
 
+.catalog-video__footer {
+  border: 1px solid var(--thin-border);
+  border-top: none;
+  padding-bottom: 32px;
+  padding-left: 33px;
+  padding-top: 35px;
+  padding-right: 33px;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 9px;
+    padding-bottom: 45px;
+    padding-right: 39px;
+    padding-left: 39px;
+  }
+  @media (min-width: $desktop-width) {
+    padding-left: 78px;
+    padding-right: 56px;
+    padding-bottom: 59px;
+    padding-top: 14px;
+  }
+}
 
 .catalog-video__description {
   font-size: 13px;
   line-height: 185%;
   margin: 0;
-  border: 1px solid var(--thin-border);
-  padding-left: 33px;
-  padding-top: 35px;
-  padding-bottom: 125px;
-  padding-right: 29px;
-
-  @media (max-width: $mobile-width-only) {
-    border-top: none;
-  }
+  margin-bottom: 41px;
+  margin-right: -5px;
 
   @media (min-width: $tablet-width) {
+    margin-bottom: 40px;
     font-size: 15px;
     line-height: 200%;
-    padding: 39px;
-    padding-top: 90px;
-    padding-bottom: 137px;
-    padding-right: 30px;
   }
 
   @media (min-width: $desktop-width) {
-    padding-left: 78px;
-    padding-right: 56px;
-    padding-top: 171px;
-    padding-bottom: 121px;
+    margin-bottom: 51px;
     grid-row: 1 / -1;
     grid-column: 2 / -1;
   }
@@ -192,14 +162,16 @@
 }
 
 .catalog-video__button {
-  max-width: 390px;
 
   @media (min-width: $tablet-width) {
     max-width: none;
-    width: 584px;
+    width: auto;
+    margin-right: 2px;
+    margin-left: 2px;
   }
 
   @media (min-width: $desktop-width) {
     width: 230px;
+    margin: 0;
   }
 }

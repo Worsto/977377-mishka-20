@@ -160,6 +160,7 @@
 
 .contacts__map {
   margin-bottom: 36px;
+  position: relative;
 
   @media (min-width: $tablet-width) {
     margin-bottom: 52px;
@@ -173,11 +174,20 @@
   }
 }
 
-.contacts__map-image {
-  left: calc(50% - 161px);
+.contacts__hiding-box {
   position: absolute;
   z-index: -1;
+  width: 100%;
+}
+
+.contacts__map-image {
   height: 457px;
+  margin: 0 auto;
+  display: block;
+
+  @media (min-width: $tablet-width) {
+    width: 768px;
+  }
 
   @media (min-width: $desktop-width) {
     left: auto;

@@ -9,8 +9,12 @@
   color: inherit;
   height: 100%;
 
-  @media (min-width: $tablet-width) and (max-width: $desktop-width) {
+  @media (min-width: $tablet-width) {
     flex-direction: row;
+  }
+
+  @media (min-width: $desktop-width) {
+    flex-direction: column;
   }
 
   &:hover,
