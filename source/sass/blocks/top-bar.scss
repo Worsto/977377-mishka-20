@@ -5,6 +5,9 @@
   border-bottom-style: solid;
   border-bottom-width: 1px;
 
+  @media (max-width: $mobile-width-only) {
+    background-color: var(--clear-background);
+  }
 
   @media (min-width: $tablet-width) {
     display: grid;

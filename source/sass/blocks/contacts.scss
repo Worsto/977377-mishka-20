@@ -178,24 +178,36 @@
   position: absolute;
   z-index: -1;
   width: 100%;
+
+  &::before {
+    content: url(../../img/icon-map-pin.svg);
+    position: absolute;
+    left: calc(50% - 22px);
+    top: calc(50% - 83px);
+
+
+    @media (min-width: $tablet-width) {
+      left: calc(50% - 20px);
+      top: calc(50% - 91px);
+    }
+
+    @media (min-width: $desktop-width) {
+      left: calc(50% - 24px);
+      top: calc(50% - 83px);
+    }
+  }
 }
 
 .contacts__map-image {
-  height: 457px;
+  height: auto;
+  width: auto;
   margin: 0 auto;
   display: block;
-
-  @media (min-width: $tablet-width) {
-    width: 768px;
-  }
-
-  @media (min-width: $desktop-width) {
-    left: auto;
-  }
 }
 
 .contacts__map-frame {
   border: none;
+  width: 100%;
 }
 
 .contacts__button-box {
