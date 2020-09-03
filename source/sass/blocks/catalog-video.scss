@@ -37,6 +37,7 @@
     height: 455px;
   }
 }
+
 .catalog-video__frame {
   position: relative;
 
@@ -47,15 +48,16 @@
   }
 
   &::before {
-    content: url(../../img/icon-play.svg);
+    content: url("../../img/icon-play.svg");
     position: absolute;
     z-index: 1;
     left: calc(50% - 50px);
     top: calc(50% - 38px);
   }
 
-  &:hover, &:focus {
-    &:before {
+  &:hover,
+  &:focus {
+    &::before {
       transform: scale(1.2);
     }
   }
@@ -90,6 +92,7 @@
       box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
     }
   }
+
   @media (min-width: $desktop-width) {
     border: 1px solid var(--thin-border);
     border-left: none;
@@ -102,7 +105,6 @@
     &:hover {
       box-shadow: 3px 0 5px rgba(0, 0, 0, 0.1);
     }
-
   }
 }
 
@@ -193,7 +195,6 @@
 }
 
 .catalog-video__button {
-
   @media (min-width: $tablet-width) {
     max-width: none;
     width: auto;
