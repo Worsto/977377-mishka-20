@@ -223,10 +223,6 @@
 
 .top-bar__search-input::placeholder {
   letter-spacing: 0.5px;
-
-  @media (min-width: $tablet-width) {
-    font-size: 0;
-  }
 }
 
 .top-bar__list-link,
@@ -280,8 +276,6 @@
 
   @media (min-width: $tablet-width) {
     width: 82px;
-    padding-left: 0;
-    padding-right: 0;
     padding-top: 34px;
     padding-bottom: 35px;
   }
@@ -417,10 +411,17 @@
 }
 
 .top-bar__search-input:focus {
-  width: 365px;
   background-color: var(--clear-background);
   z-index: 3;
-  padding-left: 20px;
-  padding-right: 20px;
   border-right: 1px solid var(--thin-border);
+
+  @media (min-width: $tablet-width) {
+    width: 365px;
+  }
+
+  & + svg {
+    z-index: 3;
+    opacity: 0.3;
+    fill: var(--main-theme);
+  }
 }

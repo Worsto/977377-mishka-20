@@ -34,7 +34,7 @@
   object-fit: cover;
 
   @media (min-width: $tablet-width) {
-    height: 455px;
+    height: 100%;
   }
 }
 
@@ -43,7 +43,7 @@
 
   @media (max-width: $mobile-width-only) {
     position: absolute;
-    top: calc(197px - 20%);
+    top: 96px;
     width: calc(100% - 60px);
   }
 
@@ -119,6 +119,7 @@
 
   @media (max-width: $mobile-width-only) {
     margin-bottom: calc(55% + 106px);
+    min-height: 46px;
   }
 
   @media (min-width: $tablet-width) {
