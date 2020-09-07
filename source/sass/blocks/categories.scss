@@ -31,7 +31,7 @@
   line-height: 126%;
   padding-top: 26px;
   padding-bottom: 31px;
-  padding-right: 100px;
+  padding-right: 30px;
   padding-left: 30px;
   position: relative;
   margin: 0 auto;
@@ -55,10 +55,6 @@
     }
   }
 
-  @media (max-width: $mobile-width-only) {
-    max-width: 380px;
-  }
-
   @media (min-width: $tablet-width) {
     font-size: 20px;
     line-height: 150%;
@@ -66,36 +62,41 @@
   }
 }
 
+.categories__link-text {
+  @media (max-width: $mobile-width-only) {
+    position: relative;
+    margin: 0 auto;
+    display: block;
+    max-width: 460px;
+    width: 100%;
+  }
+}
+
 .categories__icon {
   position: absolute;
   fill: var(--category-icon);
   opacity: 0.5;
+  top: -3px;
+  right: 6px;
+
+  @media (min-width: $tablet-width) {
+    top: 30px;
+    right: 37px;
+  }
 }
 
 .categories__interior-goods {
   background-color: var(--category-light-background);
-
-  .categories__icon {
-    top: 23px;
-    right: 36px;
-
-    @media (min-width: $tablet-width) {
-      top: 30px;
-      right: 37px;
-    }
-  }
 }
 
 .categories__toys {
   background-color: var(--category-dark-background);
 
   .categories__icon {
-    top: 21px;
-    right: 27px;
+    transform: translate(9px, -2px);
 
     @media (min-width: $tablet-width) {
-      top: 32px;
-      right: 34px;
+      transform: translate(3px, 2px);
     }
   }
 }
