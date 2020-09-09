@@ -210,6 +210,14 @@
   }
 }
 
+.form__hidden-input:focus + label {
+  outline: 2px solid var(--contrast-border);
+
+  &::before {
+    border-color: var(--theme-lines);
+  }
+}
+
 .form__checkbox-input {
   display: flex;
   box-sizing: border-box;
