@@ -106,11 +106,10 @@ exports.clean = clean;
 
 // Build
 
-const build = gulp.series(
+const build = () => gulp.series(
   "clean",
   "copy",
-  "css",
-  "html"
+  "styles"
 );
 
 exports.build = build;
