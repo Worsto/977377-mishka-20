@@ -1,10 +1,15 @@
 const gulp = require("gulp");
+const imagemin = require("gulp-imagemin");
+const webp = require("gulp-webp");
 const plumber = require("gulp-plumber");
 const sourcemap = require("gulp-sourcemaps");
 const sass = require("gulp-sass");
 const postcss = require("gulp-postcss");
 const autoprefixer = require("autoprefixer");
 const sync = require("browser-sync").create();
+const csso = require ("postcss-csso");
+const rename = require("gulp-rename");
+const del = require("del");
 
 // Styles
 
@@ -14,8 +19,10 @@ const styles = () => {
     .pipe(sourcemap.init())
     .pipe(sass())
     .pipe(postcss([
-      autoprefixer()
+      autoprefixer(),
+      csso()
     ]))
+    .pipe(rename("styles.min.css"))
     .pipe(sourcemap.write("."))
     .pipe(gulp.dest("source/css"))
     .pipe(sync.stream());
@@ -28,7 +35,7 @@ exports.styles = styles;
 const server = (done) => {
   sync.init({
     server: {
-      baseDir: 'source'
+      baseDir: 'build'
     },
     cors: true,
     notify: false,
@@ -49,3 +56,60 @@ const watcher = () => {
 exports.default = gulp.series(
   styles, server, watcher
 );
+
+// Imagemin
+
+const images = () => {
+  return gulp.src("source/img/**/*.{jpg,png,svg}")
+  .pipe(imagemin([
+  imagemin.optipng({optimizationLevel: 3}),
+  imagemin.mozjpeg({progressive: true}),
+  imagemin.svgo()
+  ]))
+}
+
+exports.images = images;
+
+// Webp
+
+const createWebp = () => {
+  return gulp.src("source/img/**/*.{png,jpg}")
+  .pipe(webp({quality: 90}))
+  .pipe(gulp.dest("source/img"))
+}
+
+exports.webp = createWebp;
+
+// Copy
+
+const copy = () => {
+  return gulp.src([
+    "source/fonts/**/*.{woff,woff2}",
+    "source/img/**",
+    "source/js/**",
+    "source/*.ico"
+  ], {
+    base: "source"
+  })
+  .pipe(gulp.dest("build"));
+};
+
+exports.copy = copy;
+
+// Сlean
+
+const clean = () => {
+  return del("build");
+};
+
+exports.clean = clean;
+
+// Build
+
+const build = gulp.series(
+  clean,
+  copy,
+  styles
+);
+
+exports.build = build;
