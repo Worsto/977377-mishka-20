@@ -40,6 +40,7 @@
 
 .catalog-video__frame {
   position: relative;
+  cursor: pointer;
 
   @media (max-width: $mobile-width-only) {
     position: absolute;
@@ -137,7 +138,7 @@
   }
 
   &::before {
-    content: url("../../img/icon-video.svg");
+    content: url("../img/icon-video.svg");
     display: block;
     margin-right: 25px;
     transform: translateY(2px);
