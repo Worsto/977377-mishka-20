@@ -21,10 +21,7 @@
     .catalog-item__heading {
       color: var(--link-type-hover);
     }
-  }
 
-  &:hover + .catalog-item__description-link,
-  &:focus + .catalog-item__description-link {
     @media (min-width: $tablet-width) {
       box-shadow: 6px 0 10px rgba(0, 0, 0, 0.1);
     }
@@ -38,9 +35,7 @@
     .catalog-item__heading {
       color: var(--link-type-down);
     }
-  }
 
-  &:active + .catalog-item__description-link {
     @media (min-width: $tablet-width) {
       box-shadow: 3px 0 5px rgba(0, 0, 0, 0.1);
     }
