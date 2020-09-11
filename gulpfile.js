@@ -22,7 +22,7 @@ const styles = () => {
       autoprefixer(),
       csso()
     ]))
-    .pipe(rename("styles.min.css"))
+    .pipe(rename("style.min.css"))
     .pipe(sourcemap.write("."))
     .pipe(gulp.dest("source/css"))
     .pipe(sync.stream());
@@ -80,22 +80,6 @@ const createWebp = () => {
 
 exports.webp = createWebp;
 
-// Copy
-
-const copy = () => {
-  return gulp.src([
-    "source/fonts/**/*.{woff,woff2}",
-    "source/img/**",
-    "source/js/**",
-    "source/*.ico"
-  ], {
-    base: "source"
-  })
-  .pipe(gulp.dest("build"));
-};
-
-exports.copy = copy;
-
 // Сlean
 
 const clean = () => {
@@ -103,6 +87,24 @@ const clean = () => {
 };
 
 exports.clean = clean;
+
+// Copy
+
+const copy = () => {
+  return gulp.src([
+    "source/fonts/**/*.{woff,woff2}",
+    "source/img/**",
+    "source/js/**",
+    "source/*.ico",
+    "source/css/**",
+    "source/*.html"
+  ], {
+    base: "source"
+  })
+  .pipe(gulp.dest("build"));
+};
+
+exports.copy = copy;
 
 // Build
 

@@ -48,7 +48,7 @@
   }
 
   &::before {
-    content: url("../../img/icon-play.svg");
+    content: url("../img/icon-play.svg");
     position: absolute;
     z-index: 1;
     left: calc(50% - 50px);
@@ -138,6 +138,7 @@
 
   &::before {
     content: url("../../img/icon-video.svg");
+    display: block;
     margin-right: 25px;
     transform: translateY(2px);
 
