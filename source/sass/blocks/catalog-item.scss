@@ -16,8 +16,8 @@
   text-decoration: none;
   color: inherit;
 
-  &:hover + .catalog-item__description-link,
-  &:focus + .catalog-item__description-link {
+  &:hover + .catalog-item__description-box,
+  &:focus + .catalog-item__description-box {
     .catalog-item__heading {
       color: var(--link-type-hover);
     }
@@ -31,7 +31,7 @@
     }
   }
 
-  &:active + .catalog-item__description-link {
+  &:active + .catalog-item__description-box {
     .catalog-item__heading {
       color: var(--link-type-down);
     }
@@ -46,7 +46,7 @@
   }
 }
 
-.catalog-item__description-link {
+.catalog-item__description-box {
   text-decoration: none;
   color: inherit;
   padding-right: 27px;
@@ -113,6 +113,11 @@
   @media (min-width: $desktop-width) {
     height: 462px;
   }
+}
+
+.catalog-item__link {
+  color: inherit;
+  text-decoration: none;
 }
 
 .catalog-item__heading {
