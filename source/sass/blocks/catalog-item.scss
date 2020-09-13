@@ -118,6 +118,16 @@
 .catalog-item__link {
   color: inherit;
   text-decoration: none;
+
+  @media (min-width: $tablet-width) {
+    padding-right: 30px;
+    margin-bottom: 7px;
+    margin-top: 27px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-right: 15px;
+  }
 }
 
 .catalog-item__heading {
@@ -131,12 +141,7 @@
   @media (min-width: $tablet-width) {
     font-size: 20px;
     line-height: 120%;
-    padding-right: 30px;
-    padding-bottom: 7px;
-  }
-
-  @media (min-width: $desktop-width) {
-    padding-right: 15px;
+    padding: 0;
   }
 }
 
